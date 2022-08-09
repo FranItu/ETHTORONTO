@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./RentableNFT";
+import "./RentableNFT.sol";
 
 uint256 constant MAX_MINTABLE = 1000;
 uint64 constant TOKEN_EXPIRY_DAYS = 30;
 
 contract Calliope {
-  mapping(address => RentableNFT[]) creators
+  mapping(address => RentableNFT) creators;
 
   constructor() {
 
@@ -17,36 +17,30 @@ contract Calliope {
     address creatorAddress,
     string memory name,
     string memory symbol,
-    string memory tokenURI) {
-    RentableNFT storage newCollection = new RentableNFT(name, symbol);
-    creators[creatorAddress].push(newCollection);
+    string memory tokenURI) public {
+    RentableNFT newCollection = new RentableNFT(name, symbol);
 
+    creators[creatorAddress] = newCollection;
     for (uint256 i = 0; i < MAX_MINTABLE; i++) {
       newCollection.mint(tokenURI);
     }
   }
 
-  function rentFromCollection(address collection) {
-    uint256 firstAvailableTokenId = -1;
-    RentableNFT rentableNFT = RentableNFT(collection)
+  function rentFromCollection(address collection, uint256 tokenId) public {
+    RentableNFT rentableNFT = RentableNFT(collection);
+    bool nftAvailable = rentableNFT.userOf(tokenId) == address(0);
 
-    for (uint256 i = 0; i < MAX_MINTABLE; i++) {
-      if (rentableNFT.userOf(i) == address(0)) {
-        firstAvailableTokenId = i;
-      }
-    }
-
-    require(firstAvailableTokenId > 0,
-    "No NFTs available for rent in collection");
+    require(nftAvailable,
+    "This NFT is not available");
 
     rentableNFT.rentOut(
-      firstAvailableTokenId,
+      tokenId,
       msg.sender,
-      now + TOKEN_EXPIRY_DAYS days
+      uint64(block.timestamp + 30 days)
     );
   }
 
-  function getCollectionsForCreator(address creatorAddress) {
+  function getCollectionsForCreator(address creatorAddress) public {
 
   }
 }
