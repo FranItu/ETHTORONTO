@@ -4,11 +4,6 @@ const RentableNFT = artifacts.require('RentableNFT');
 
 contract('RentableNFT', (accounts) => {
   describe('Rent flow', async () => {
-    // before('', async () => {
-    //   await adoption.adopt(8, { from: accounts[0] });
-    //   expectedAdopter = accounts[0];
-    // });
-
     it('Does stuff', async () => {
       const rentableNFT = await RentableNFT.deployed();
       const [owner, renter] = accounts;
