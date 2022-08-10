@@ -6,6 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    colors: {
+      primary: '#BD4B31',
+      secondary: '#F2CDA2',
+      // ...
+    },
   },
   plugins: [],
 };
