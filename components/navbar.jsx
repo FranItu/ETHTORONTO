@@ -5,9 +5,11 @@ const Navbar = () => {
     <>
       <div className="flex justify-between">
         <div className="container  mx-auto content-center">
-          <div className="flex flex-row" style={{ width: "700px" }}>
+          <div className="flex flex-row" style={{ width: "600px" }}>
             <div className="w-10 mr-20">
-              <img src="/images/logo.png" />
+              <a href="/">
+                <img src="/images/logo.png" />
+              </a>
             </div>
             <div className="flex-1" style={{ color: "#FDF3D0" }}>
               <a href="#">About</a>
@@ -18,12 +20,10 @@ const Navbar = () => {
             <div className="flex-1" style={{ color: "#FDF3D0" }}>
               <a href="#">Top Categories</a>
             </div>
-            <div className="flex-1">
-              <ConnectButton />
-            </div>
           </div>
         </div>
       </div>
+      <ConnectButton />
     </>
   );
 };

@@ -1,12 +1,12 @@
 import type { NextPage } from 'next';
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { Hero } from '../components/hero';
+import { Title } from '../components/title';
 
 const Home: NextPage = () => {
   return (
     <>
-      <Hero />
+      <Title />
     </>
   );
 };

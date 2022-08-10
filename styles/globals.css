@@ -7,8 +7,8 @@ html,
 body {
   padding: 0;
   margin: 8px;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #dd7e6b;
+  font-family: system-ui;
+  background-color: #D08370;
   color: #f8e6d0;
 }
 

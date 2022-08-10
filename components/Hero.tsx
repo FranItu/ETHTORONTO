@@ -15,8 +15,16 @@ export const Hero = () => {
       </p>
 
       <div className="mt-8 flex gap-8 w-fit mx-auto">
-        <SecondaryButton>How does it work?</SecondaryButton>
-        <Button>Get started</Button>
+        <SecondaryButton>
+        <a href='/how-does-it-work'>
+          How does it work?
+          </a>
+          </SecondaryButton>
+        <Button>
+          <a href='/get-started'>
+          Get started
+          </a>
+          </Button>
       </div>
     </div>
   );
