@@ -1,4 +1,4 @@
-import { Button } from './Button';
+import { Button } from './button';
 import { SecondaryButton } from './secondary-button';
 
 export const Hero = () => {
