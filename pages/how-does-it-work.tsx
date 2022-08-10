@@ -27,7 +27,7 @@ const HowDoesItWork: NextPage = () => {
             b. The voting token is single use and lasts for the whole time the renter holds the token.
             `} num={2}/>
         <ListPoint content={`99% of the revenue goes back to the content creator. 
-1% goes to a common pool.
+            1% goes to a common pool.
             `} num={3}/>
         <ListPoint content={`At the end of each month the pool gets redistributed to the place where most renters vote. Calliope gets 5% from this pool as revenue.`} num={4}/>
         <ListPoint content={`The rented NFTs go back automatically to the content creator at the end of the month.`} num={5}/>

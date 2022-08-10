@@ -3,7 +3,7 @@ import { ConnectButton, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 const Navbar = () => {
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex justify-between m-4">
         <div className="container  mx-auto content-center">
           <div className="flex flex-row" style={{ width: "600px" }}>
             <div className="w-10 mr-20">
@@ -23,7 +23,9 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <ConnectButton />
+      <div className="m-2">
+        <ConnectButton />
+      </div>
     </>
   );
 };
