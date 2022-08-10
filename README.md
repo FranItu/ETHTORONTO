@@ -8,6 +8,8 @@ NightCafe AI image references: https://creator.nightcafe.studio/u/Argos39
 
 Googledoc: https://docs.google.com/document/d/16WeP0thSqQG2vdwigQifMKibBarAdKQwN3TQ8XagTTY/edit?usp=sharing
 
+Presentation Script: https://docs.google.com/document/d/156Hc8mC4d2rzf39MfKvrTWIvf8QFj25tc6JQJaOb_OY/edit
+
 Problem
 It’s difficult for small artists and content creators to generate funding for their projects. In addition, it is also hard for them to promote themselves and get their names out there.
 It sounds like only big artists right now can create NFT collections
