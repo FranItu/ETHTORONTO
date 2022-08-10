@@ -8,9 +8,12 @@ const Home: NextPage = () => {
   return (
     <>
       <Hero />
+      <div className='grid justify-items-center mt-10'>
       <FeaturedContent creator={"Francisco"} votes={40} content={`
       Born in Equador, Francisco discovered AI art at age 19 and has since created a collection of intriguing abstract art to share.
       `} img={"images/AntMigration_Dali_2_0.jpg"}/>
+      </div>
+
     </>
   );
 };
